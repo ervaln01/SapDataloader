@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapDataloader", "SapDataloader\SapDataloader.csproj", "{823FDCC8-29B8-4B0F-A9C2-87A576E3708E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823FDCC8-29B8-4B0F-A9C2-87A576E3708E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823FDCC8-29B8-4B0F-A9C2-87A576E3708E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823FDCC8-29B8-4B0F-A9C2-87A576E3708E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823FDCC8-29B8-4B0F-A9C2-87A576E3708E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B1EC5D2-410A-4192-959C-A26DF315581F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://artfs:8080/tfs/arcelikcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SapDataloader\\SapDataloader.csproj
+		SccProjectName1 = SapDataloader
+		SccLocalPath1 = SapDataloader
+	EndGlobalSection
+EndGlobal

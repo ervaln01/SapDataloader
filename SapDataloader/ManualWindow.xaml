@@ -1,0 +1,67 @@
+﻿<Window x:Class="SapDataloader.ManualWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SapDataloader"
+        mc:Ignorable="d"
+        Height="450" MinHeight="450" Width="800" MinWidth="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Grid.Row="4" Header="Manualy downloading">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <RadioButton Grid.Row="0" FontSize="18" VerticalAlignment="Center" IsChecked="True" Name="RbExtra"  Content="Extraordinary" Click="RadioButton_Click" />
+                    <RadioButton Grid.Row="1" FontSize="18" VerticalAlignment="Center" IsChecked="False" Name="RbAll" Content="All" Click="RadioButton_Click" />
+                    <RadioButton Grid.Row="2" FontSize="18" VerticalAlignment="Center" IsChecked="False" Name="RbPeriod"  Content="Period" Click="RadioButton_Click" />
+                    <RadioButton Grid.Row="3" FontSize="18" VerticalAlignment="Center" IsChecked="False" Name="RbList"  Content="Product list" Click="RadioButton_Click" />
+                    <Label Grid.Row="5" Content="DL now, next auto dl will be transferred" Name="ModeInfo"/>
+                </Grid>
+                <GroupBox Grid.Column="2" Header="Period" Name="Period" Visibility="Hidden">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Content="Date before"/>
+                        <DatePicker Grid.Row="1" FontSize="18" SelectedDateChanged="DatePicker_SelectedDateChanged" Name="PeriodStart" DisplayDateStart="01.01.2011"/>
+                        <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Content="Date After"/>
+                        <DatePicker Grid.Row="3" FontSize="18" SelectedDateChanged="DatePicker_SelectedDateChanged" Name="PeriodFinish"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="2" Header="Product list" Name="Products" Visibility="Hidden">
+                    <TextBox Name="ProductList" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+                </GroupBox>
+                <Grid Grid.Column="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" FontSize="18" Click="ManualDlClick" Content="Manualy DL"/>
+                    <CheckBox Grid.Row="1" FontSize="18" IsChecked="False" VerticalAlignment="Center" Content="Save to DB after DL" Click="SaveResultsClick"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
